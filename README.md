@@ -1,1 +1,1 @@
-# OptifineInstances
+# Optifine instances for MultiMC
