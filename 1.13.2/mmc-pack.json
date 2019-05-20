@@ -2,35 +2,35 @@
     "components": [
         {
             "cachedName": "LWJGL 3",
-            "cachedVersion": "3.2.1",
+            "cachedVersion": "3.1.6",
             "cachedVolatile": true,
             "dependencyOnly": true,
             "uid": "org.lwjgl3",
-            "version": "3.2.1"
+            "version": "3.1.6"
         },
         {
             "cachedName": "Minecraft",
             "cachedRequires": [
                 {
-                    "equals": "3.2.1",
-                    "suggests": "3.2.1",
+                    "equals": "3.1.6",
+                    "suggests": "3.1.6",
                     "uid": "org.lwjgl3"
                 }
             ],
-            "cachedVersion": "1.14",
+            "cachedVersion": "1.13.2",
             "important": true,
             "uid": "net.minecraft",
-            "version": "1.14"
+            "version": "1.13.2"
         },
         {
             "cachedName": "OptiFine",
             "cachedRequires": [
                 {
-                    "equals": "1.14",
+                    "equals": "1.13.2",
                     "uid": "net.minecraft"
                 }
             ],
-            "cachedVersion": "HD Ultra F1",
+            "cachedVersion": "HD Ultra E7",
             "uid": "optifine.Optifine"
         }
     ],
