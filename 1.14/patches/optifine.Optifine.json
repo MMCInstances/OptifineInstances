@@ -3,13 +3,13 @@
         "optifine.OptiFineTweaker"
     ],
     "formatVersion": 1,
-    "libraries": [{
+    "+libraries": [{
             "name": "net.minecraft:launchwrapper:1.12"
         },
         {
-            "MMC-filename": "OptiFine_1.14_HD_U_F1_pre1.jar",
+            "MMC-filename": "OptiFine_1.14_HD_U_F1_pre6.jar",
             "MMC-hint": "local",
-            "name": "optifine:OptiFine:1.14_HD_U_F1_pre1"
+            "name": "optifine:OptiFine:1.14_HD_U_F1_pre6"
         }
     ],
     "mainClass": "net.minecraft.launchwrapper.Launch",
