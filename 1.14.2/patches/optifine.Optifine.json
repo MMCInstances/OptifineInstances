@@ -7,15 +7,15 @@
             "name": "net.minecraft:launchwrapper:1.12"
         },
         {
-            "MMC-filename": "OptiFine_1.14_HD_U_F1_pre6.jar",
+            "MMC-filename": "OptiFine_1.14.2_HD_U_F1_pre6.jar",
             "MMC-hint": "local",
-            "name": "optifine:OptiFine:1.14_HD_U_F1_pre6"
+            "name": "optifine:OptiFine:1.14.2_HD_U_F1_pre6"
         }
     ],
     "mainClass": "net.minecraft.launchwrapper.Launch",
     "name": "OptiFine",
     "requires": [{
-        "equals": "1.14",
+        "equals": "1.14.2",
         "uid": "net.minecraft"
     }],
     "uid": "optifine.Optifine",
