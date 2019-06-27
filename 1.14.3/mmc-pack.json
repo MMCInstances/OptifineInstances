@@ -14,15 +14,15 @@
                 "suggests": "3.2.1",
                 "uid": "org.lwjgl3"
             }],
-            "cachedVersion": "1.14.2",
+            "cachedVersion": "1.14.3",
             "important": true,
             "uid": "net.minecraft",
-            "version": "1.14.2"
+            "version": "1.14.3"
         },
         {
             "cachedName": "OptiFine",
             "cachedRequires": [{
-                "equals": "1.14.2",
+                "equals": "1.14.3",
                 "uid": "net.minecraft"
             }],
             "cachedVersion": "HD Ultra F1",
