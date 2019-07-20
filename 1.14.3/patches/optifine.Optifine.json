@@ -4,14 +4,14 @@
     ],
     "formatVersion": 1,
     "+libraries": [{
-            "MMC-filename": "launchwrapper-2.0.jar",
+            "MMC-filename": "launchwrapper-of-2.1.jar",
             "MMC-hint": "local",
-            "name": "optifine:launchwrapper:2.0"
+            "name": "optifine:launchwrapper-of:2.1"
         },
         {
-            "MMC-filename": "OptiFine_1.14.3_HD_U_F1.jar",
+            "MMC-filename": "OptiFine_1.14.3_HD_U_F2.jar",
             "MMC-hint": "local",
-            "name": "optifine:OptiFine:1.14.3_HD_U_F1"
+            "name": "optifine:OptiFine:1.14.3_HD_U_F2"
         }
     ],
     "mainClass": "net.minecraft.launchwrapper.Launch",
@@ -21,5 +21,5 @@
         "uid": "net.minecraft"
     }],
     "uid": "optifine.Optifine",
-    "version": "HD Ultra F1"
+    "version": "HD Ultra F2"
 }
