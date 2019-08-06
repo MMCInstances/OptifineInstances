@@ -9,9 +9,9 @@
             "name": "optifine:launchwrapper-of:2.1"
         },
         {
-            "MMC-filename": "OptiFine_1.14.4_HD_U_F3_pre2.jar",
+            "MMC-filename": "OptiFine_1.14.4_HD_U_F3.jar",
             "MMC-hint": "local",
-            "name": "optifine:OptiFine:1.14.4_HD_U_F3_pre2"
+            "name": "optifine:OptiFine:1.14.4_HD_U_F3"
         }
     ],
     "mainClass": "net.minecraft.launchwrapper.Launch",
