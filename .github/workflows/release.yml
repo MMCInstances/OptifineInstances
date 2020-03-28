@@ -43,7 +43,7 @@ jobs:
       - name: Zip patch
         uses: montudor/action-zip@v0.1.0
         with:
-          args: zip -qq -r /${{ env.mc_version }}_patch.zip . -i ./libraries/ ./patches/ ./mmc-pack.json
+          args: zip -qq -r ../${{ env.mc_version }}_patch.zip . -i ./libraries/ ./patches/ ./mmc-pack.json
 
       - run: cd ..
 
