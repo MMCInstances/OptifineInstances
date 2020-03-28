@@ -17,6 +17,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: v1.15.2-0.0
+          release_name: 1.15.2 with OptiFine HD Ultra
           body: .
           draft: true
           prerelease: true
