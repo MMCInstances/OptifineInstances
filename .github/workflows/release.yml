@@ -19,7 +19,7 @@ jobs:
         with:
           tag_name: v${{ env.mc_version }}-0.0
           release_name: ${{ env.mc_version }} with OptiFine HD Ultra
-          body: "# [Optifine Changelog]()"
+          body: "## [Optifine Changelog]()"
           draft: true
           prerelease: true
 
