@@ -38,8 +38,9 @@ jobs:
           asset_name: ${{ env.mc_version }}.zip
           asset_content_type: application/zip
 
+      run: cd ${{ env. mc_version }}
+
       - name: Zip patch
-        run: cd ${{ env. mc_version }}
         uses: montudor/action-zip@v0.1.0
         with:
           args: zip -qq -r /${{ env.mc_version }}_patch.zip ./libraries/ ./patches/ ./mmc-pack.json
