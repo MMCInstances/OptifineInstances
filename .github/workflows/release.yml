@@ -18,8 +18,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v${{ jobs.create-release.mc_version }}-0.0
-          release_name: ${{ jobs.create-release.mc_version }} with OptiFine HD Ultra
+          tag_name: v${{ mc_version }}-0.0
+          release_name: ${{ mc_version }} with OptiFine HD Ultra
           body: \# [Optifine Changelog]()
           draft: true
           prerelease: true
@@ -27,7 +27,7 @@ jobs:
       - name: Zip instance
         uses: montudor/action-zip@v0.1.0
         with:
-          args: zip -qq -r ./${{ jobs.create-release.mc_version }}.zip ./${{ jobs.create-release.mc_version }}/
+          args: zip -qq -r ./${{ mc_version }}.zip ./${{ mc_version }}/
 
       - name: Upload instance ZIP
         uses: actions/upload-release-asset@v1
@@ -35,14 +35,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./${{ jobs.create-release.mc_version }}.zip
-          asset_name: ${{ jobs.create-release.mc_version }}.zip
+          asset_path: ./${{ mc_version }}.zip
+          asset_name: ${{ mc_version }}.zip
           asset_content_type: application/zip
 
       - name: Zip patch
         uses: montudor/action-zip@v0.1.0
         with:
-          args: zip -qq -r ./${{ jobs.create-release.mc_version }}_patch.zip ./${{ jobs.create-release.mc_version }}/libraries/ ./${{ jobs.create-release.mc_version }}/patches/ ./${{ jobs.create-release.mc_version }}/mmc-pack.json
+          args: zip -qq -r ./${{ mc_version }}_patch.zip ./${{ mc_version }}/libraries/ ./${{ mc_version }}/patches/ ./${{ mc_version }}/mmc-pack.json
 
       - name: Upload patch ZIP
         uses: actions/upload-release-asset@v1
@@ -50,6 +50,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./${{ jobs.create-release.mc_version }}_patch.zip
-          asset_name: ${{ jobs.create-release.mc_version }}_patch.zip
+          asset_path: ./${{ mc_version }}_patch.zip
+          asset_name: ${{ mc_version }}_patch.zip
           asset_content_type: application/zip
