@@ -3,13 +3,12 @@ name: Create Release
 on: push
 
 jobs:
+  env:
+    mc_version: 1.15.2
   create-release:
     name: Create release
     runs-on: ubuntu-latest
     steps:
-      env:
-        mc_version: 1.15.2
-
       - name: Checkout code
         uses: actions/checkout@master
 
@@ -19,8 +18,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: v${{ steps.mc_version }}-0.0
-          release_name: ${{ steps.mc_version }} with OptiFine HD Ultra
+          tag_name: v${{ jobs.mc_version }}-0.0
+          release_name: ${{ jobs.mc_version }} with OptiFine HD Ultra
           body: \# [Optifine Changelog]()
           draft: true
           prerelease: true
@@ -28,7 +27,7 @@ jobs:
       - name: Zip instance
         uses: montudor/action-zip@v0.1.0
         with:
-          args: zip -qq -r ./${{ steps.mc_version }}.zip ./${{ steps.mc_version }}/
+          args: zip -qq -r ./${{ jobs.mc_version }}.zip ./${{ jobs.mc_version }}/
 
       - name: Upload instance ZIP
         uses: actions/upload-release-asset@v1
@@ -36,14 +35,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./${{ steps.mc_version }}.zip
-          asset_name: ${{ steps.mc_version }}.zip
+          asset_path: ./${{ jobs.mc_version }}.zip
+          asset_name: ${{ jobs.mc_version }}.zip
           asset_content_type: application/zip
 
       - name: Zip patch
         uses: montudor/action-zip@v0.1.0
         with:
-          args: zip -qq -r ./${{ steps.mc_version }}_patch.zip ./${{ steps.mc_version }}/libraries/ ./${{ steps.mc_version }}/patches/ ./${{ steps.mc_version }}/mmc-pack.json
+          args: zip -qq -r ./${{ jobs.mc_version }}_patch.zip ./${{ jobs.mc_version }}/libraries/ ./${{ jobs.mc_version }}/patches/ ./${{ jobs.mc_version }}/mmc-pack.json
 
       - name: Upload patch ZIP
         uses: actions/upload-release-asset@v1
@@ -51,6 +50,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./${{ steps.mc_version }}_patch.zip
-          asset_name: ${{ steps.mc_version }}_patch.zip
+          asset_path: ./${{ jobs.mc_version }}_patch.zip
+          asset_name: ${{ jobs.mc_version }}_patch.zip
           asset_content_type: application/zip
