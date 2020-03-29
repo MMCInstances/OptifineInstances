@@ -53,6 +53,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./${{ env.mc_version }}/${{ env.mc_version }}_patch.zip
+          asset_path: ./${{ env.mc_version }}_patch.zip
           asset_name: ${{ env.mc_version }}_patch.zip
           asset_content_type: application/zip
