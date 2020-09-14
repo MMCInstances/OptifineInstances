@@ -27,6 +27,14 @@ will need to manually change the version in this file. If these
 don't match the patch versions, MultiMC will refuse to launch
 the instance.
 
+### Naming conventions
+
+* The root folder should be named after the target Minecraft version. (e.g. 1.16.2)
+* The pack icon should be named in snake case. (e.g. stone_slab.png)
+* The OptiFine jar should be the name of the extracted mod minus the `_MOD` suffix. (e.g. `OptiFine_1.16.2_HD_U_G3.jar` instead of `OptiFine_1.16.2_HD_U_G3_MOD.jar`)
+* The `name` field in the `instance.cfg` file should be the same as the root folder name.
+* The patch file should be named `optifine.Optifine.json`.
+
 ## Releases
 
 Releases will be created by me after the instance is merged
