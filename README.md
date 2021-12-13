@@ -1,9 +1,5 @@
 # Optifine instances for MultiMC
 
-## Disclaimer
-
-**I no longer play Minecraft nor am I active in any Minecraft communities. Instances will be created on a per-issue basis. If a new version of OptiFine is released, please [create an issue](https://github.com/MMCInstances/OptifineInstances/issues/new) and I will update this repo ASAP.**
-
 ## Usage
 
 ### Installing a New Instance
